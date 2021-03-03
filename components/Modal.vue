@@ -1,19 +1,21 @@
 <template>
   <div class="overlay" @click="closeModal">
     <div class="modal">
-      <h4 class="pb-10">Profile</h4>
-      <p><span> Name: </span>{{ personInfo.name }}</p>
-      <p><span> Username: </span> {{ personInfo.username }}</p>
-      <p><span> Email: </span> {{ personInfo.email }}</p>
-      <p><span> Address: </span> {{ address }}</p>
-      <p><span> Phone: </span> {{ personInfo.phone }}</p>
-      <p><span> Website: </span> {{ personInfo.website }}</p>
+      <div class="modal__content">
+        <h4 class="pb-10">Profile</h4>
+        <p><span> Name: </span>{{ personInfo.name }}</p>
+        <p><span> Username: </span> {{ personInfo.username }}</p>
+        <p><span> Email: </span> {{ personInfo.email }}</p>
+        <p><span> Address: </span> {{ address }}</p>
+        <p><span> Phone: </span> {{ personInfo.phone }}</p>
+        <p><span> Website: </span> {{ personInfo.website }}</p>
 
-      <h4 class="pb-10 pt-20">Company</h4>
-      <p><span> Name: </span> {{ personInfo.company.name }}</p>
-      <p><span> Catch Phrase: </span> {{ personInfo.company.catchPhrase }}</p>
-      <p><span> BS: </span> {{ personInfo.company.bs }}</p>
-      <button class="close" @click="closeModal">X</button>
+        <h4 class="pb-10 pt-20">Company</h4>
+        <p><span> Name: </span> {{ personInfo.company.name }}</p>
+        <p><span> Catch Phrase: </span> {{ personInfo.company.catchPhrase }}</p>
+        <p><span> BS: </span> {{ personInfo.company.bs }}</p>
+        <button class="close" @click="closeModal">X</button>
+      </div>
     </div>
   </div>
 </template>
@@ -53,15 +55,32 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow-y: scroll;
   .modal {
     width: 100%;
-    max-width: 440px;
+    max-width: 480px;
+    height: 300px;
     position: relative;
     border-radius: 3px;
     padding: 30px;
     margin: 10px;
     background: #fff;
+
+    .modal__content {
+      overflow-y: scroll;
+      height: 100%;
+      &::-webkit-scrollbar {
+        width: 5px;
+      }
+      &::-webkit-scrollbar-track {
+        background: $grey;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: $dark-blue;
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background: $violet;
+      }
+    }
 
     p {
       border-bottom: 1px solid $grey;
@@ -91,12 +110,13 @@ export default {
       cursor: pointer;
       font-size: $size-18;
       border-radius: 50%;
+      z-index: 999;
       outline: none;
       width: 40px;
       height: 40px;
       @media (max-width: $view-port-medium) {
-        width: 20px;
-        height: 20px;
+        right: 40%;
+        top: -25px;
       }
     }
   }
