@@ -3,7 +3,7 @@
     <div class="banner__image pb-40">
       <img src="@/assets/images/woman-banner.svg" alt="Woman happy" />
     </div>
-    <ButtonPrimary text="Consultar Leads" to="/leads" />
+    <ButtonPrimary text="See Leads" to="/leads" />
   </div>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
-  <nuxt-link :to="to" tag="button" class="button--primary">
+  <button class="button--second" @click="emitEvent">
     {{ text || 'Carregando...' }}
-  </nuxt-link>
+  </button>
 </template>
 
 <script>
@@ -11,24 +11,24 @@ export default {
       type: String || String,
       default: false,
     },
-    to: {
-      type: String || Object,
-      default: false,
-      required: false,
+  },
+  methods: {
+    emitEvent() {
+      this.$emit('open-modal')
     },
   },
 }
 </script>
 
 <style lang="scss" scoped>
-.button--primary {
+.button--second {
   color: $grey;
   border: 0px;
   cursor: pointer;
-  font-size: $size-18;
+  font-size: $size-14;
   border-radius: 3px;
-  background-color: $violet;
-  padding: 15px 40px;
+  background-color: $dark-blue;
+  padding: 5px 15px;
   transition: 0.5s ease-in-out;
 
   &:hover {
