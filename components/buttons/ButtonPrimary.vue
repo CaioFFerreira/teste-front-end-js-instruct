@@ -31,6 +31,11 @@ export default {
   padding: 15px 40px;
   transition: 0.5s ease-in-out;
 
+  @media (max-width: $view-port-medium) {
+    font-size: $size-16;
+    padding: 10px 30px;
+  }
+
   &:hover {
     opacity: 0.8;
   }

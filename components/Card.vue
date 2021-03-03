@@ -1,12 +1,18 @@
 <template>
   <div class="card">
-    <Modal v-if="showModal" :person-info="lead" />
+    <transition name="fade" mode="out-in">
+      <Modal
+        v-if="showModal"
+        :person-info="lead"
+        @close-modal="closeModalOverlay"
+      />
+    </transition>
     <div class="card__tag">
       <img src="@/assets/images/tag.svg" alt="Tag" />
     </div>
     <h2 class="pb-10">{{ lead.name }}</h2>
     <p class="pb-20">{{ lead.company.catchPhrase }}.</p>
-    <ButtonSecond text="See more" @open-modal="openModal(lead.id)" />
+    <ButtonSecond text="See more" @open-modal="openModal" />
   </div>
 </template>
 
@@ -31,10 +37,13 @@ export default {
     }
   },
   methods: {
-    openModal(id) {
+    openModal() {
       this.showModal = !this.showModal
-      // eslint-disable-next-line no-console
-      console.log(id)
+    },
+    closeModalOverlay({ target, currentTarget }) {
+      if (target === currentTarget) {
+        this.showModal = false
+      }
     },
   },
 }

@@ -48,13 +48,23 @@ export default {
   .leads__list {
     display: flex;
     gap: 30px;
-
+    .leads__image {
+      @media (max-width: $view-port-medium) {
+        display: none;
+      }
+    }
     .leads__items {
       flex: 1;
       padding: 20px;
       display: grid;
       gap: 30px;
       grid-template-columns: repeat(3, 1fr);
+      @media (max-width: $view-port-large) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media (max-width: $view-port-medium) {
+        grid-template-columns: repeat(1, 1fr);
+      }
     }
   }
 }

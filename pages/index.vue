@@ -20,5 +20,12 @@ export default {
 <style lang="scss" scoped>
 .banner {
   text-align: center;
+  .banner__image {
+    img {
+      @media (max-width: $view-port-medium) {
+        max-width: 200px;
+      }
+    }
+  }
 }
 </style>
