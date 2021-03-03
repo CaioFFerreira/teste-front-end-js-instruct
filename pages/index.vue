@@ -1,21 +1,24 @@
 <template>
-  <div class="leads">
-    <Logo />
-    <!-- <Logo dark-background /> -->
-    <h1 class="leads__title">Leads</h1>
+  <div class="banner">
+    <div class="banner__image pb-40">
+      <img src="@/assets/images/woman-banner.svg" alt="Woman happy" />
+    </div>
+    <ButtonPrimary text="Consultar Leads" to="/leads" />
   </div>
 </template>
 
 <script>
-export default {}
+import ButtonPrimary from '@/components/buttons/ButtonPrimary.vue'
+
+export default {
+  components: {
+    ButtonPrimary,
+  },
+}
 </script>
 
-<style lang="scss" scoped="true">
-.leads {
-  &__title {
-    margin: 1.4rem 0;
-    padding: 1.4rem 0;
-    border-top: $border-color 1px solid;
-  }
+<style lang="scss" scoped>
+.banner {
+  text-align: center;
 }
 </style>
