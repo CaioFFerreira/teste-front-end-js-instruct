@@ -115,7 +115,7 @@ export default {
       width: 40px;
       height: 40px;
       @media (max-width: $view-port-medium) {
-        right: 40%;
+        right: 45%;
         top: -25px;
       }
     }

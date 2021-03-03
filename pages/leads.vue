@@ -1,13 +1,14 @@
 <template>
   <div class="leads">
-    <div class="leads__filters">
+    <form class="leads__filters" @submit.prevent>
       <input
         v-model="namePerson"
         type="text"
         placeholder="Search name"
         class="input_company_name"
       />
-    </div>
+      <button type="submit">enviar</button>
+    </form>
     <div class="leads__list">
       <div class="leads__image">
         <img src="@/assets/images/women-handup.svg" alt="Woman handup" />
