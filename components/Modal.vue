@@ -53,6 +53,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-y: scroll;
   .modal {
     width: 100%;
     max-width: 440px;
@@ -65,11 +66,19 @@ export default {
     p {
       border-bottom: 1px solid $grey;
       padding: 10px 0px;
+      font-size: $size-16;
+      @media (max-width: $view-port-medium) {
+        font-size: $size-14;
+      }
       span {
         background-color: $violet;
         padding: 5px;
         color: $grey;
         margin-right: 10px;
+        @media (max-width: $view-port-medium) {
+          display: block;
+          margin-bottom: 10px;
+        }
       }
     }
     .close {
@@ -85,6 +94,10 @@ export default {
       outline: none;
       width: 40px;
       height: 40px;
+      @media (max-width: $view-port-medium) {
+        width: 20px;
+        height: 20px;
+      }
     }
   }
 }
