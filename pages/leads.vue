@@ -53,6 +53,7 @@ export default {
   components: {
     Card,
   },
+  layout: 'principal',
   data() {
     return {
       leads: '',

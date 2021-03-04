@@ -14,6 +14,7 @@ export default {
   components: {
     ButtonPrimary,
   },
+  layout: 'principal',
 }
 </script>
 
