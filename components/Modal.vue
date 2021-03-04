@@ -2,19 +2,43 @@
   <div class="overlay" @click="closeModal">
     <div class="modal">
       <div class="modal__content">
-        <h4 class="pb-10">Profile</h4>
-        <p><span> Name: </span>{{ personInfo.name }}</p>
-        <p><span> Username: </span> {{ personInfo.username }}</p>
-        <p><span> Email: </span> {{ personInfo.email }}</p>
-        <p><span> Address: </span> {{ address }}</p>
-        <p><span> Phone: </span> {{ personInfo.phone }}</p>
-        <p><span> Website: </span> {{ personInfo.website }}</p>
-
-        <h4 class="pb-10 pt-20">Company</h4>
-        <p><span> Name: </span> {{ personInfo.company.name }}</p>
-        <p><span> Catch Phrase: </span> {{ personInfo.company.catchPhrase }}</p>
+        <h4 class="pb-10">{{ $t('modal.profile') }}</h4>
         <p>
-          <span> BS: </span>
+          <span>{{ $t('modal.name') }}</span>
+          {{ personInfo.name }}
+        </p>
+        <p>
+          <span> {{ $t('modal.userName') }}</span>
+          {{ personInfo.username }}
+        </p>
+        <p>
+          <span> {{ $t('modal.email') }} </span>
+          {{ personInfo.email }}
+        </p>
+        <p>
+          <span> {{ $t('modal.address') }}</span>
+          {{ address }}
+        </p>
+        <p>
+          <span> {{ $t('modal.phone') }}</span>
+          {{ personInfo.phone }}
+        </p>
+        <p>
+          <span>{{ $t('modal.website') }} </span>
+          {{ personInfo.website }}
+        </p>
+
+        <h4 class="pb-10 pt-20">{{ $t('modal.company') }}</h4>
+        <p>
+          <span> {{ $t('modal.name') }} </span>
+          {{ personInfo.company.name }}
+        </p>
+        <p>
+          <span> Catch Phrase: </span>
+          {{ personInfo.company.catchPhrase }}
+        </p>
+        <p>
+          <span> {{ $t('modal.category') }} </span>
           <span v-for="bs in companyBs" :key="bs" class="bs">{{ bs }}</span>
         </p>
         <button class="close" @click="closeModal">X</button>
@@ -66,7 +90,7 @@ export default {
   justify-content: center;
   .modal {
     width: 100%;
-    max-width: 480px;
+    max-width: 600px;
     height: 300px;
     position: relative;
     border-radius: 3px;
