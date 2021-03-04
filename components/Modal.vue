@@ -13,7 +13,10 @@
         <h4 class="pb-10 pt-20">Company</h4>
         <p><span> Name: </span> {{ personInfo.company.name }}</p>
         <p><span> Catch Phrase: </span> {{ personInfo.company.catchPhrase }}</p>
-        <p><span> BS: </span> {{ personInfo.company.bs }}</p>
+        <p>
+          <span> BS: </span>
+          <span v-for="bs in companyBs" :key="bs" class="bs">{{ bs }}</span>
+        </p>
         <button class="close" @click="closeModal">X</button>
       </div>
     </div>
@@ -24,7 +27,7 @@
 export default {
   props: {
     personInfo: {
-      type: Object || String,
+      type: Object || Array,
       default: false,
     },
   },
@@ -32,6 +35,12 @@ export default {
     address() {
       const { street, suite, city } = this.personInfo.address
       return `${street}, ${suite} - ${city}`
+    },
+    companyBs() {
+      const bsSplit = this.personInfo.company.bs.split(' ')
+      const bsJoin = bsSplit.join(', ')
+      const bsArray = bsJoin.split(', ')
+      return bsArray
     },
   },
   methods: {
@@ -98,6 +107,9 @@ export default {
           display: block;
           margin-bottom: 10px;
         }
+      }
+      .bs {
+        background-color: $dark-blue;
       }
     }
     .close {

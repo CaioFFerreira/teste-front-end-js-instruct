@@ -27,7 +27,7 @@ export default {
   },
   props: {
     lead: {
-      type: Object || String,
+      type: Object || String || Array,
       default: false,
     },
   },
@@ -35,6 +35,14 @@ export default {
     return {
       showModal: false,
     }
+  },
+  computed: {
+    companyBs() {
+      const bsSplit = this.lead.company.bs.split(' ')
+      const bsJoin = bsSplit.join(', ')
+      const bsArray = bsJoin.split(', ')
+      return bsArray
+    },
   },
   methods: {
     openModal() {
