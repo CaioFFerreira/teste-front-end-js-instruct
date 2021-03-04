@@ -2,6 +2,7 @@
   <form class="leads__filters" @submit.prevent>
     <input
       type="text"
+      autofocus
       placeholder="Person name"
       class="input_company_name"
       @input="(event) => this.$emit('input-value', event)"
@@ -13,13 +14,22 @@
         @click="filtroModal = !filtroModal"
       >
         {{ category }} ▼
+        <span
+          v-if="category !== 'All category'"
+          class="close--category"
+          @click.stop="category = 'All category'"
+        >
+          X
+        </span>
       </button>
-      <div v-if="filtroModal" class="filter__category">
-        <label v-for="item in categoryValues" :key="item.value">
-          <input v-model="category" type="radio" :value="item.value" />
-          {{ item.value }}
-        </label>
-      </div>
+      <transition name="fade" mode="out-in">
+        <div v-if="filtroModal" class="filter__category">
+          <label v-for="item in categoryValues" :key="item.value">
+            <input v-model="category" type="radio" :value="item.value" />
+            {{ item.value }}
+          </label>
+        </div>
+      </transition>
     </div>
 
     <button type="submit" class="leads__submit">
@@ -43,6 +53,7 @@ export default {
   watch: {
     category() {
       this.emitvalue()
+      this.filtroModal = false
     },
   },
   methods: {
@@ -100,7 +111,6 @@ export default {
       &::-webkit-scrollbar-thumb:hover {
         background: $green;
       }
-
       label {
         text-align: left;
         color: $grey;
@@ -114,14 +124,20 @@ export default {
       background-color: $dark-blue;
       cursor: pointer;
       color: $grey;
+      position: relative;
       font-size: $size-14;
       box-shadow: 0 0 15px rgb(0 0 0 / 16%);
       border-radius: 3px;
       transition: 0.5s ease-in-out;
       outline: none;
       width: 100%;
-      &:hover {
-        background-color: $violet;
+
+      .close--category {
+        position: absolute;
+        right: 15px;
+        color: $violet;
+        font-weight: bold;
+        font-size: $size-18;
       }
       @media (max-width: $view-port-medium) {
         width: 100%;
@@ -152,9 +168,6 @@ export default {
     border-radius: 3px;
     transition: 0.5s ease-in-out;
     outline: none;
-    &:hover {
-      background-color: $dark-blue;
-    }
     @media (max-width: $view-port-medium) {
       width: 100%;
     }
