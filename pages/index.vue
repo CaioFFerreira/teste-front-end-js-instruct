@@ -3,7 +3,7 @@
     <div class="banner__image pb-40">
       <img src="@/assets/images/woman-banner.svg" alt="Woman happy" />
     </div>
-    <ButtonPrimary text="See Leads" to="/leads" />
+    <ButtonPrimary :text="$t('home.button')" to="/leads" />
   </div>
 </template>
 
@@ -15,6 +15,9 @@ export default {
     ButtonPrimary,
   },
   layout: 'principal',
+  head: {
+    title: 'Vough - See Leads now!',
+  },
 }
 </script>
 

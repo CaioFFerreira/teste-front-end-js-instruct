@@ -36,7 +36,28 @@ export default {
     scss: './assets/scss/*.scss',
   },
 
-  modules: [],
-
+  modules: ['nuxt-i18n'],
+  i18n: {
+    locales: ['en'],
+    defaultLocale: 'en',
+    vueI18n: {
+      fallbackLocale: 'en',
+      messages: {
+        en: {
+          home: {
+            button: 'See Leads',
+          },
+          leads: {
+            noResults: 'No results...',
+            searchText: 'Search',
+          },
+          page404: {
+            text: 'Error 404 - Not found',
+            buttonBack: 'Back home',
+          },
+        },
+      },
+    },
+  },
   build: {},
 }

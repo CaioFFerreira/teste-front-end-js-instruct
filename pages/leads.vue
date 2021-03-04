@@ -23,7 +23,9 @@
         </div>
       </div>
 
-      <button type="submit" class="leads__submit">Search</button>
+      <button type="submit" class="leads__submit">
+        {{ $t('leads.searchText') }}
+      </button>
     </form>
     <div class="leads__list">
       <div class="leads__image">
@@ -39,20 +41,16 @@
       </div>
       <div v-else class="empty">
         <img src="@/assets/images/cup.svg" alt="Cup" />
-        <p class="pt-20">Nenhum resultado encontrado...</p>
+        <p class="pt-20">{{ $t('leads.noResults') }}</p>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Card from '@/components/Card'
 import Leads from '../domain/Leads/Leads'
 
 export default {
-  components: {
-    Card,
-  },
   layout: 'principal',
   data() {
     return {
@@ -141,6 +139,9 @@ export default {
         },
       ],
     }
+  },
+  head: {
+    title: 'Vough - Potential customers',
   },
   computed: {
     filterAll() {

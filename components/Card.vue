@@ -18,12 +18,10 @@
 
 <script>
 import ButtonSecond from '@/components/buttons/ButtonSecond.vue'
-import Modal from '@/components/Modal.vue'
 
 export default {
   components: {
     ButtonSecond,
-    Modal,
   },
   props: {
     lead: {
