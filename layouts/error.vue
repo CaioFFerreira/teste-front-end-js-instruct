@@ -3,7 +3,7 @@
     <div class="error__image">
       <img src="@/assets/images/girl-404.svg" alt="Page 404" />
     </div>
-    <h1 class="pt-20 pb-20">{{ $t('page404.text') }}</h1>
+    <h1 class="pt-20 pb-20 error__title">{{ $t('page404.text') }}</h1>
     <ButtonPrimary :text="$t('page404.buttonBack')" to="/" />
   </div>
 </template>

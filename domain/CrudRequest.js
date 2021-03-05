@@ -5,8 +5,8 @@ class CrudRequest {
     throw new Error('Method baseUrl not implemented')
   }
 
-  static list() {
-    return http.get(this.baseUrl())
+  static get() {
+    return http.get(`${this.baseUrl()}`)
   }
 }
 

@@ -137,7 +137,7 @@ export default {
         right: 15px;
         color: $violet;
         font-weight: bold;
-        font-size: $size-18;
+        font-size: $size-22;
       }
       @media (max-width: $view-port-medium) {
         width: 100%;
