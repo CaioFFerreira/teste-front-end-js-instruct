@@ -3,7 +3,7 @@ import Logo from '@/components/Logo.vue'
 
 describe('Logo', () => {
   const wrapper = shallowMount(Logo)
-  test('is a Vue instance', () => {
+  test('Verificar se o componente está sendo renderizado', () => {
     const actual = wrapper.exists()
     expect(actual).toBeTruthy()
   })

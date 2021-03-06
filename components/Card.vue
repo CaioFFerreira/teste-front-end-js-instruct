@@ -11,7 +11,7 @@
       <img src="@/assets/images/tag.svg" alt="Tag" />
     </div>
     <h2 class="pb-10">{{ lead.name }}</h2>
-    <p class="pb-20">{{ lead.company.catchPhrase }}.</p>
+    <p class="pb-20">{{ $t('modal.website') }}: {{ lead.website }}.</p>
     <ButtonSecond text="See more" @open-modal="openModal" />
   </div>
 </template>
@@ -33,17 +33,6 @@ export default {
     return {
       showModal: false,
     }
-  },
-  computed: {
-    companyBs() {
-      if (this.lead.company.bs) {
-        const bsSplit = this.lead.company.bs.split(' ')
-        const bsJoin = bsSplit.join(', ')
-        const bsArray = bsJoin.split(', ')
-        return bsArray
-      }
-      return ''
-    },
   },
   methods: {
     openModal() {
