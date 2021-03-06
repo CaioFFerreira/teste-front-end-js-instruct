@@ -10,7 +10,7 @@ describe('FormFilters', () => {
     expect(actual).toBeTruthy()
   })
 
-  test('Verifica se ao existir dropdown ele está com o estado inicial de falso', () => {
+  test('Verifica se o dropdown está com o estado inicial de falso', () => {
     const dropDown = wrapper.find('.filter__category')
     expect(dropDown.exists()).toBeFalsy()
   })

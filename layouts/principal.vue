@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <main>
     <header class="header">
       <Logo />
     </header>
     <Nuxt />
-  </div>
+  </main>
 </template>
 
 <style lang="scss" scoped="true">

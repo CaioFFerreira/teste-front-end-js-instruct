@@ -1,10 +1,10 @@
 <template>
-  <div class="banner">
+  <section class="banner">
     <div class="banner__image pb-40">
       <img src="@/assets/images/woman-banner.svg" alt="Woman happy" />
     </div>
     <ButtonPrimary :text="$t('home.button')" to="/leads" />
-  </div>
+  </section>
 </template>
 
 <script>

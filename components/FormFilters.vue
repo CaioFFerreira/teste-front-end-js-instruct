@@ -23,7 +23,7 @@
         </span>
       </button>
       <transition name="fade" mode="out-in">
-        <div v-if="false" class="filter__category">
+        <div v-if="filtroModal" class="filter__category">
           <label v-for="item in categoryValues" :key="item.value">
             <input v-model="category" type="radio" :value="item.value" />
             {{ item.value }}

@@ -1,5 +1,5 @@
 <template>
-  <div class="leads">
+  <section class="leads">
     <FormFilters
       @input-value="namePerson = $event.target.value"
       @input-category="category = $event"
@@ -16,9 +16,9 @@
           class="leads__card"
         />
       </div>
-      <EmptyList v-else />
+      <EmptyList v-else :message-error="messageError" />
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -31,6 +31,8 @@ export default {
       leads: '',
       namePerson: '',
       category: 'All category',
+      messageError: '',
+      loading: false,
     }
   },
   head: {
@@ -46,9 +48,13 @@ export default {
   },
   methods: {
     getList() {
-      Leads.get().then(({ data }) => {
-        this.leads = data
-      })
+      Leads.get()
+        .then(({ data }) => {
+          this.leads = data
+        })
+        .catch((error) => {
+          this.messageError = error.message
+        })
     },
     filterSearchName(leads) {
       if (this.namePerson) {

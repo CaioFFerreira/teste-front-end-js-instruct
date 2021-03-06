@@ -1,12 +1,24 @@
 <template>
   <div class="empty">
     <img src="@/assets/images/cup.svg" alt="Cup" />
-    <p class="pt-20 empty__text">{{ $t('leads.noResults') }}</p>
+    <p class="pt-20 pb-20 empty__text">{{ $t('leads.noResults') }}</p>
+    <div v-if="messageError">
+      <p class="empty__text error-api">{{ messageError }}</p>
+      <p class="empty__text pt-20">{{ $t('leads.errorNetwork') }}</p>
+    </div>
+    <Loading />
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    messageError: {
+      type: String || Number,
+      default: false,
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -14,6 +26,12 @@ export default {}
   @media (max-width: $view-port-medium) {
     width: 100%;
     text-align: center;
+  }
+  .error-api {
+    display: inline-block;
+    background-color: tomato;
+    color: $grey;
+    padding: 5px;
   }
   p {
     font-size: $size-16;

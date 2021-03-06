@@ -49,6 +49,7 @@ export default {
           },
           leads: {
             noResults: 'No results...',
+            errorNetwork: 'Contact the Vought support team: (12) 1231-1231',
             searchText: 'Search',
           },
           page404: {

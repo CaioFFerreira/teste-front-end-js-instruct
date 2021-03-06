@@ -15,7 +15,7 @@ describe('Index page', () => {
 
   test('As propriedades corretas estão presentes no estado do componente', () => {
     const received = Object.keys(wrapper.vm.$data)
-    const expected = ['leads', 'namePerson', 'category']
+    const expected = ['leads', 'namePerson', 'category', 'messageError']
     expect(received).toEqual(expected)
   })
 })
