@@ -1,7 +1,6 @@
 <template>
   <div class="empty">
-    <img src="@/assets/images/cup.svg" alt="Cup" />
-    <p class="pt-20 pb-20 empty__text">{{ $t('leads.noResults') }}</p>
+    <h2 class="pt-20 pb-20 empty__text">{{ $t('leads.noResults') }}</h2>
     <div v-if="messageError">
       <p class="empty__text error-api">{{ messageError }}</p>
       <p class="empty__text pt-20">{{ $t('leads.errorNetwork') }}</p>

@@ -13,6 +13,7 @@ export default {}
 
 <style lang="scss" scoped>
 .loading {
+  margin-top: 20px;
   span {
     display: inline-block;
     width: 10px;
