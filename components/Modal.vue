@@ -51,20 +51,26 @@
 export default {
   props: {
     personInfo: {
-      type: Object || Array,
+      type: Object || Array || String,
       default: false,
     },
   },
   computed: {
     address() {
-      const { street, suite, city } = this.personInfo.address
-      return `${street}, ${suite} - ${city}`
+      if (this.personInfo.address) {
+        const { street, suite, city } = this.personInfo.address
+        return `${street}, ${suite} - ${city}`
+      }
+      return 'Dados indisponíveis'
     },
     companyBs() {
-      const bsSplit = this.personInfo.company.bs.split(' ')
-      const bsJoin = bsSplit.join(', ')
-      const bsArray = bsJoin.split(', ')
-      return bsArray
+      if (this.personInfo.company.bs) {
+        const bsSplit = this.personInfo.company.bs.split(' ')
+        const bsJoin = bsSplit.join(', ')
+        const bsArray = bsJoin.split(', ')
+        return bsArray
+      }
+      return ''
     },
   },
   methods: {

@@ -36,10 +36,13 @@ export default {
   },
   computed: {
     companyBs() {
-      const bsSplit = this.lead.company.bs.split(' ')
-      const bsJoin = bsSplit.join(', ')
-      const bsArray = bsJoin.split(', ')
-      return bsArray
+      if (this.lead.company.bs) {
+        const bsSplit = this.lead.company.bs.split(' ')
+        const bsJoin = bsSplit.join(', ')
+        const bsArray = bsJoin.split(', ')
+        return bsArray
+      }
+      return ''
     },
   },
   methods: {
