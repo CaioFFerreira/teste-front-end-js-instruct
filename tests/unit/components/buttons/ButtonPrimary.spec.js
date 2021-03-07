@@ -8,7 +8,7 @@ describe('ButtonPrimary', () => {
     expect(actual).toBeTruthy()
   })
 
-  test('Verifica definição das props no component', () => {
+  test('As props devem ser text e to', () => {
     const received = Object.keys(wrapper.vm._props)
     const expected = ['text', 'to']
     expect(received).toEqual(expected)

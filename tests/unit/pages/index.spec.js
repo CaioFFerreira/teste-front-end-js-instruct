@@ -10,7 +10,7 @@ describe('Index page', () => {
     expect(actual).toBeTruthy()
   })
 
-  test('Verifica se a imagem está visivel', () => {
+  test('a imagem deve estar visivel', () => {
     const image = wrapper.find('.banner__image img')
     expect(image.isVisible()).toBeTruthy()
   })

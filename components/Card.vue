@@ -25,7 +25,8 @@ export default {
   },
   props: {
     lead: {
-      type: Object || String || Array,
+      type: Object,
+      // eslint-disable-next-line vue/require-valid-default-prop
       default: false,
     },
   },

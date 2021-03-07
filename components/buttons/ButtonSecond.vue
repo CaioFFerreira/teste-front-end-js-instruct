@@ -8,7 +8,8 @@
 export default {
   props: {
     text: {
-      type: String || String,
+      type: String,
+      // eslint-disable-next-line vue/require-valid-default-prop
       default: false,
     },
   },

@@ -3,7 +3,7 @@ import * as Modal from '@/components/Modal.vue'
 
 describe('Modal', () => {
   const wrapper = shallowMount(Modal, {
-    mocks: { $t: () => '' },
+    mocks: { $t: () => 'msg error' },
   })
   test('Verificar se o componente está sendo renderizado', () => {
     const actual = wrapper.exists()

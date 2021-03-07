@@ -10,12 +10,12 @@ describe('error page 404', () => {
     expect(actual).toBeTruthy()
   })
 
-  test('Verifica se a imagem está visivel', () => {
+  test('a imagem deve estar visivel', () => {
     const image = wrapper.find('.error__image img')
     expect(image.isVisible()).toBeTruthy()
   })
 
-  test('Verifica se o titulo está visivel', () => {
+  test('o titulo deve estar visivel', () => {
     const title = wrapper.find('.error__title')
     expect(title.isVisible()).toBeTruthy()
   })

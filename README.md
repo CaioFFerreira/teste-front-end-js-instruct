@@ -17,12 +17,22 @@ Instalando as dependências do projeto
 npm install ou npm i
 ```
 
+Iniciando o projeto
+```sh
+npm run dev
+```
+
+Teste unitário
+```sh
+yarn jest
+```
+
 ### Tecnologias Front-end e dependências:
 - JavaScript
 - HTML
 - CSS ( Flex-box e Grid Layout )
 - Vue.js (Nuxt.js)
-- Jest
+- Jest (https://vue-test-utils.vuejs.org/)
 - Axios
 - nuxt-i18n (internacionalização)
 - Fonte: Roboto
