@@ -10,11 +10,6 @@ describe('EmptyList', () => {
     expect(actual).toBeTruthy()
   })
 
-  test('Verifica se a imagem está visivel', () => {
-    const image = wrapper.find('.empty img')
-    expect(image.isVisible()).toBeTruthy()
-  })
-
   test('Verifica se o texto está visivel', () => {
     const image = wrapper.find('.empty__text')
     expect(image.isVisible()).toBeTruthy()

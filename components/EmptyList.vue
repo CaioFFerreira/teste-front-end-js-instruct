@@ -1,11 +1,13 @@
 <template>
   <div class="empty">
-    <h2 class="pt-20 pb-20 empty__text">{{ $t('leads.noResults') }}</h2>
-    <div v-if="messageError">
-      <p class="empty__text error-api">{{ messageError }}</p>
-      <p class="empty__text pt-20">{{ $t('leads.errorNetwork') }}</p>
+    <div class="empty__container">
+      <Loading class="pb-20" />
+      <h3 class="pt-20 pb-20 empty__text">{{ $t('leads.noResults') }}</h3>
+      <div v-if="messageError">
+        <p class="empty__text error-api">{{ messageError }}</p>
+        <p class="empty__text pt-20">{{ $t('leads.errorNetwork') }}</p>
+      </div>
     </div>
-    <Loading />
   </div>
 </template>
 
@@ -22,10 +24,11 @@ export default {
 
 <style lang="scss" scoped>
 .empty {
-  @media (max-width: $view-port-medium) {
-    width: 100%;
-    text-align: center;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
   .error-api {
     display: inline-block;
     background-color: tomato;

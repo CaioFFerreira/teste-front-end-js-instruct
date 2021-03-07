@@ -32,7 +32,6 @@ export default {
       namePerson: '',
       category: 'All category',
       messageError: '',
-      loading: false,
     }
   },
   head: {

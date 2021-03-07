@@ -11,7 +11,7 @@
       <img src="@/assets/images/tag.svg" alt="Tag" />
     </div>
     <h2 class="pb-10">{{ lead.name }}</h2>
-    <p class="pb-20">{{ $t('modal.website') }}: {{ lead.website }}.</p>
+    <p class="pb-20">{{ $t('modal.phone') }}: {{ lead.phone }}.</p>
     <ButtonSecond text="See more" @open-modal="openModal" />
   </div>
 </template>
