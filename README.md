@@ -37,6 +37,9 @@ yarn jest
 - nuxt-i18n (internacionalização)
 - Fonte: Roboto
 
+### Testes de cobertura:
+![Teste](https://github.com/CaioFFerreira/teste-front-end-js-instruct/blob/master/assets/images/testes.PNG)
+
 ### Protótipo criado para o projeto:
 - [Figma](https://www.figma.com/file/ThFbOmnzVioRELBTgpdo5d/UI-Instruct---teste-front-end)
 
