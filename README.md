@@ -27,6 +27,11 @@ Teste unitário
 yarn jest
 ```
 
+Cobertura dos testes
+```sh
+yarn jest --coverage
+```
+
 ### Tecnologias Front-end e dependências:
 - JavaScript
 - HTML
