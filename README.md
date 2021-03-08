@@ -31,6 +31,8 @@ Cobertura dos testes
 ```sh
 yarn jest --coverage
 ```
+### Site em produção
+- https://voughtech.herokuapp.com/
 
 ### Tecnologias Front-end e dependências:
 - JavaScript
