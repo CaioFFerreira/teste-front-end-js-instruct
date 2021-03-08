@@ -42,7 +42,7 @@ yarn jest --coverage
 - nuxt-i18n (internacionalização)
 - Fonte: Roboto
 
-### Testes de cobertura:
+### Teste unitário:
 ![Teste](https://github.com/CaioFFerreira/teste-front-end-js-instruct/blob/master/assets/images/testes.PNG)
 
 ### Protótipo criado para o projeto:
