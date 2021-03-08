@@ -31,6 +31,10 @@ Cobertura dos testes
 ```sh
 yarn jest --coverage
 ```
+
+### Protótipo criado para o projeto:
+- [Figma](https://www.figma.com/file/ThFbOmnzVioRELBTgpdo5d/UI-Instruct---teste-front-end)
+
 ### Site em produção
 - https://voughtech.herokuapp.com/
 
@@ -43,12 +47,10 @@ yarn jest --coverage
 - Axios
 - nuxt-i18n (internacionalização)
 - Fonte: Roboto
+- Hospedagem (https://dashboard.heroku.com/apps/voughtech)
 
 ### Teste unitário:
 ![Teste](https://github.com/CaioFFerreira/teste-front-end-js-instruct/blob/master/assets/images/testes.PNG)
-
-### Protótipo criado para o projeto:
-- [Figma](https://www.figma.com/file/ThFbOmnzVioRELBTgpdo5d/UI-Instruct---teste-front-end)
 
 Contato
 ----
