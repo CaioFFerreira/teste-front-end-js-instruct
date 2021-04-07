@@ -6,7 +6,7 @@
 export default {
   layout: 'principal',
   head: {
-    title: 'Home page - Mlabs',
+    title: 'Scheduling List - Mlabs',
   },
 }
 </script>

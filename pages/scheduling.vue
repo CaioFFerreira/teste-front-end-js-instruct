@@ -1,12 +1,12 @@
 <template>
-  <HomeTemplate />
+  <SchedulingTemplate />
 </template>
 
 <script>
 export default {
   layout: 'principal',
   head: {
-    title: 'Home page - Mlabs',
+    title: 'Scheduling - Mlabs',
   },
 }
 </script>

@@ -6,7 +6,7 @@ export default {
   },
 
   head: {
-    title: 'Vough Leads',
+    title: 'Mlabs agendamento',
     htmlAttrs: {
       lang: 'en',
     },
@@ -19,7 +19,12 @@ export default {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap',
+          'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap',
+      },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
       },
     ],
   },
@@ -28,9 +33,13 @@ export default {
 
   plugins: [],
 
-  components: true,
+  components: [{ path: '@/components', pathPrefix: false }],
 
-  buildModules: ['@nuxtjs/style-resources', '@nuxtjs/eslint-module'],
+  buildModules: [
+    '@nuxtjs/style-resources',
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/google-fonts',
+  ],
 
   styleResources: {
     scss: './assets/scss/*.scss',
@@ -44,29 +53,12 @@ export default {
       fallbackLocale: 'en',
       messages: {
         en: {
-          home: {
-            button: 'See Leads',
-          },
-          leads: {
-            noResults: 'No results...',
-            errorNetwork: 'Contact the Vought support team: (12) 1231-1231',
-            searchText: 'Search',
+          profile: {
+            name: 'Alselmo Carlos',
           },
           page404: {
             text: 'Error 404 - Not found',
             buttonBack: 'Back home',
-          },
-          modal: {
-            profile: 'Profile',
-            name: 'Name',
-            userName: 'Username',
-            email: 'E-mail',
-            address: 'Address',
-            phone: 'Phone',
-            website: 'Website',
-            company: 'Company',
-            catchPhrase: 'Catch Phrase',
-            category: 'Category',
           },
         },
       },
