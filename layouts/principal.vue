@@ -1,9 +1,9 @@
 <template>
   <main>
-    <Header />
-    <Container>
-      <Nuxt />
-    </Container>
+    <header class="header">
+      <Logo />
+    </header>
+    <Nuxt />
   </main>
 </template>
 
@@ -11,5 +11,6 @@
 .header {
   padding: 10px 20px;
   margin-bottom: 40px;
+  border-bottom: $border-color 1px solid;
 }
 </style>

@@ -2,4 +2,16 @@
 @import 'abstracts/spacing';
 @import 'abstracts/fonts';
 @import 'base/reset';
+@import 'base/typography';
 @import 'responsive/viewport';
+
+// animation
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}

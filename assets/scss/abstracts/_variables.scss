@@ -1,26 +1,13 @@
 /* Colors */ 
-$orange:#F2994A;
-$orange-2:#EF9F2E;
-$orange-light:#FFF3E0;
-$orange-dark:#E0812C;
-$red:#E02B4B;
-$blue:#2F80ED;
-$pink:#D60F86;
-$green:#27AE60;
-$blue-2:#1661F3;
-$blue-3:#2E92EF;
-$black:#000000;
-$black-2:#333333;
-$gray-dark:#4F4F4F;
-$gray-dark-2:#989898;
-$gray:#828282;
-$gray-light:#949494;
-$gray-light-2:#9E9E9E;
-$gray-light-3:#BDBDBD;
-$gray-light-4:#DDDDDD;
-$white:#ffffff;
-$white-2:#F8F8F8;
-$white-3:#F2F2F2;
-$white-4:#E0E0E0;
-$white-5:#FAFAFA;
-$overlay:rgba(0, 0, 0, 0.2);
+$blue:  #3113F2;
+$light-blue: #3D9DF2;
+$dark-blue: #180F50;
+$green: #5EF2D7;
+$grey: #ECF0F1;
+$violet: #B885F0;
+
+/* Theme */
+$default: $dark-blue;
+$primary: $blue;
+$secondary: $green;
+$border-color: $grey;
